@@ -87,7 +87,7 @@ public class Programa {
     private static void altaTrabajador(Scanner leer, Catalogo catalogo) {
         System.out.print("Ingrese el ID del trabajador: ");
         int idTrabajador = leer.nextInt();
-        leer.nextLine(); // Consumir el salto de línea
+        leer.nextLine();
 
         if (catalogo.buscarTrabajador(idTrabajador) != null) {
             System.out.println("Error: Ya existe un trabajador con ese ID.");
