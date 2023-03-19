@@ -14,11 +14,11 @@ public class Programa {
         // MENU PRINCIPAL
         do {
             System.out.println("HORNOS MEXICANOS");
-            System.out.println("[1] Catálogo de trabajadores");
-            System.out.println("[2] Catálogo de herramientas");
-            System.out.println("[3] Control de préstamos de herramientas");
+            System.out.println("[1] Catalogo de trabajadores");
+            System.out.println("[2] Catalogo de herramientas");
+            System.out.println("[3] Control de prestamos de herramientas");
             System.out.println("[4] Finalizar programa");
-            System.out.print("Seleccione una opción: ");
+            System.out.print("Seleccione una opcion: ");
             opcion = leer.nextInt();
 
             switch (opcion) {
@@ -35,7 +35,7 @@ public class Programa {
                     System.out.println("Finalizando programa...");
                     break;
                 default:
-                    System.out.println("Opción inválida. Intente de nuevo.");
+                    System.out.println("Opcion invalida. Intente de nuevo.");
                     break;
             }
         } while (opcion != 4);
@@ -46,12 +46,12 @@ public class Programa {
         int opcion;
 
         do {
-            System.out.println("\nHORNOS MEXICANOS - CATÁLOGO DE TRABAJADORES");
+            System.out.println("\nHORNOS MEXICANOS - CATALOGO DE TRABAJADORES");
             System.out.println("[1] Alta de un trabajador");
             System.out.println("[2] Consulta de un trabajador");
             System.out.println("[3] Consulta de todos los trabajadores");
-            System.out.println("[4] Regresar al menú principal");
-            System.out.print("Seleccione una opción: ");
+            System.out.println("[4] Regresar al menu principal");
+            System.out.print("Seleccione una opcion: ");
             opcion = leer.nextInt();
 
             switch (opcion) {
@@ -63,22 +63,22 @@ public class Programa {
                     if (catalogo.getContT() - 1 > 0) {
                         consultaTrabajador(leer, catalogo);
                     } else {
-                        System.out.println("Aún no hay registros de trabajadores");
+                        System.out.println("Aun no hay registros de trabajadores");
                     }
                     break;
                 case 3:
                     if (catalogo.getContT() - 1 > 0) {
                         consultaTodosTrabajadores(catalogo);
                     } else {
-                        System.out.println("Aún no hay registros de trabajadores");
+                        System.out.println("Aun no hay registros de trabajadores");
                     }
 
                     break;
                 case 4:
-                    System.out.println("Regresando al menú principal...");
+                    System.out.println("Regresando al menu principal...");
                     break;
                 default:
-                    System.out.println("Opción inválida. Intente de nuevo.");
+                    System.out.println("Opcion invalida. Intente de nuevo.");
                     break;
             }
         } while (opcion != 4);
@@ -87,7 +87,7 @@ public class Programa {
     private static void altaTrabajador(Scanner leer, Catalogo catalogo) {
         System.out.print("Ingrese el ID del trabajador: ");
         int idTrabajador = leer.nextInt();
-        leer.nextLine();
+        leer.nextLine(); // Consumir el salto de línea
 
         if (catalogo.buscarTrabajador(idTrabajador) != null) {
             System.out.println("Error: Ya existe un trabajador con ese ID.");
@@ -124,18 +124,18 @@ public class Programa {
         }
     }
 
-//MENU HERRAMIENTAS Y MERODOS
+    // MENU HERRAMIENTAS Y MERODOS
 
     private static void menuHerramientas(Scanner leer, Catalogo catalogo) {
         int opcion;
 
         do {
-            System.out.println("\nHORNOS MEXICANOS - CATÁLOGO DE HERRAMIENTAS");
+            System.out.println("\nHORNOS MEXICANOS - CATALOGO DE HERRAMIENTAS");
             System.out.println("[1] Alta de una herramienta");
             System.out.println("[2] Consulta de una herramienta");
             System.out.println("[3] Consulta de todas las herramientas");
-            System.out.println("[4] Regresar al menú principal");
-            System.out.print("Seleccione una opción: ");
+            System.out.println("[4] Regresar al menu principal");
+            System.out.print("Seleccione una opcion: ");
             opcion = leer.nextInt();
 
             switch (opcion) {
@@ -146,7 +146,7 @@ public class Programa {
                     if (catalogo.getContH() - 1 > 0) {
                         consultaHerramienta(leer, catalogo);
                     } else {
-                        System.out.println("Aún no hay registros de herramientas");
+                        System.out.println("Aun no hay registros de herramientas");
                     }
                     break;
 
@@ -154,14 +154,14 @@ public class Programa {
                     if (catalogo.getContH() - 1 > 0) {
                         consultaGeneralHerramientas(catalogo);
                     } else {
-                        System.out.println("Aún no hay registros de herramientas");
+                        System.out.println("Aun no hay registros de herramientas");
                     }
                     break;
                 case 4:
-                    System.out.println("Regresando al menú principal...");
+                    System.out.println("Regresando al menu principal...");
                     break;
                 default:
-                    System.out.println("Opción inválida. Intente de nuevo.");
+                    System.out.println("Opcion invalida. Intente de nuevo.");
                     break;
             }
         } while (opcion != 4);
@@ -208,19 +208,19 @@ public class Programa {
         }
     }
 
-    // MENU PRESTAMOS Y METODOS 
+    // MENU PRESTAMOS Y METODOS
 
     private static void menuPrestamos(Scanner leer, Catalogo catalogo) {
         int opcion;
         do {
-            System.out.println("\nHORNOS MEXICANOS - CONTROL DE PRÉSTAMOS DE HERRAMIENTAS");
-            System.out.println("[1] Registrar préstamo");
-            System.out.println("[2] Registrar devolución");
-            System.out.println("[3] Consultar préstamo");
-            System.out.println("[4] Reporte de préstamos activos");
-            System.out.println("[5] Reporte de préstamos concluidos");
-            System.out.println("[6] Regresar al menú principal");
-            System.out.print("Seleccione una opción: ");
+            System.out.println("\nHORNOS MEXICANOS - CONTROL DE PRESTAMOS DE HERRAMIENTAS");
+            System.out.println("[1] Registrar prestamo");
+            System.out.println("[2] Registrar devolucion");
+            System.out.println("[3] Consultar prestamo");
+            System.out.println("[4] Reporte de prestamos activos");
+            System.out.println("[5] Reporte de prestamos concluidos");
+            System.out.println("[6] Regresar al menu principal");
+            System.out.print("Seleccione una opcion:\n");
             opcion = leer.nextInt();
 
             switch (opcion) {
@@ -243,10 +243,10 @@ public class Programa {
                     reportePrestamosConcluidos(catalogo);
                     break;
                 case 6:
-                    System.out.println("Regresando al menú principal...");
+                    System.out.println("Regresando al menu principal...");
                     break;
                 default:
-                    System.out.println("Opción inválida. Intente de nuevo.");
+                    System.out.println("Opcion inválida. Intente de nuevo.");
                     break;
             }
         } while (opcion != 6);
@@ -256,10 +256,10 @@ public class Programa {
         int confirmar;
         int contadorPrestamos = catalogo.getContP();
         if (catalogo.buscarPrestamo(contadorPrestamos) != null) {
-            System.out.println("Error: Ya existe un préstamo con ese número.");
+            System.out.println("Error: Ya existe un prestamo con ese numero.");
             return;
         }
-        System.out.printf(" Numero de prestamo: %d\n", catalogo.getContP());
+        System.out.printf("Numero de prestamo: %d\n", catalogo.getContP());
         System.out.print("Ingrese el id del trabajador: ");
         int idTrabajador = leer.nextInt();
         Trabajador trabajador = catalogo.buscarTrabajador(idTrabajador);
@@ -285,7 +285,7 @@ public class Programa {
             return;
         }
 
-        System.out.print("Ingrese la fecha de préstamo (dd/MM/YYYY): ");
+        System.out.print("Ingrese la fecha de prestamo (dd/MM/YYYY): ");
         String fechaPrestamo = leer.next();
         try {
             LocalDate.parse(fechaPrestamo, dtf);
@@ -293,62 +293,36 @@ public class Programa {
             System.out.println("Error: Formato de fecha incorrecto.");
             return;
         }
-        System.out.println("Estás seguro de registrar el prestamo? [1=Si, 2=No");
+        System.out.println("Estas seguro de registrar el prestamo? [1=Si, 2=No]");
         confirmar = leer.nextInt();
         if (confirmar == 1) {
             Prestamo prestamo = new Prestamo(contadorPrestamos, idTrabajador, idHerramienta, fechaPrestamo, null, 'A');
             catalogo.agregarPrestamo(prestamo);
             herramienta.setEstado('P');
-
-            System.out.println("Préstamo registrado exitosamente.");
+            catalogo.contActivos++;
+            System.out.println("Prestamo registrado exitosamente.");
         } else {
-            System.out.println("No se realizó el registro");
+            System.out.println("No se realizo el registro");
         }
     }
 
-    
     private static void registrarDevolucion(Scanner leer, Catalogo catalogo) {
-        System.out.print("Ingrese el número de préstamo: ");
-        int numPrestamo = leer.nextInt();
 
-        Prestamo prestamo = catalogo.buscarPrestamo(numPrestamo);
-        if (prestamo == null) {
-            System.out.println("Error: Préstamo no encontrado.");
-            return;
-        }
+        
+        if (catalogo.getContP() >= 2) {
+            System.out.print("Ingrese el numero de préstamo: ");
+            int numPrestamo = leer.nextInt();
 
-        if (prestamo.getEstado() == 'C') {
-            System.out.println("Error: El préstamo ya está concluido.");
-            return;
-        }
-
-        System.out.print("Ingrese la fecha de devolución (dd/MM/YYYY): ");
-        String fechaDevolucion = leer.next();
-        try {
-            LocalDate fechaDev = LocalDate.parse(fechaDevolucion, dtf);
-            LocalDate fechaPrest = LocalDate.parse(prestamo.getFechaPrestamo(), dtf);
-            if (fechaDev.isBefore(fechaPrest)) {
-                System.out.println("Error: La fecha de devolución no puede ser anterior a la fecha de préstamo.");
+            Prestamo prestamo = catalogo.buscarPrestamo(numPrestamo);
+            if (prestamo == null) {
+                System.out.println("Error: Prestamo no encontrado.");
                 return;
             }
-        } catch (DateTimeParseException e) {
-            System.out.println("Error: Formato de fecha incorrecto.");
-            return;
-        }
-        Herramienta herramienta = catalogo.buscarHerramienta(prestamo.getIdHerramienta());
-        herramienta.setEstado('D');
-        prestamo.setFechaDevolucion(fechaDevolucion);
-        prestamo.setEstado('C');
 
-        System.out.println("Devolución registrada exitosamente.");
-    }
-
-    private static void consultarPrestamo(Scanner leer, Catalogo catalogo) {
-        System.out.print("Ingrese el número de préstamo: ");
-        int numPrestamo = leer.nextInt();
-
-        Prestamo prestamo = catalogo.buscarPrestamo(numPrestamo);
-        if (prestamo != null) {
+            if (prestamo.getEstado() == 'C') {
+                System.out.println("Error: El prestamo ya esta concluido.");
+                return;
+            }
             Trabajador trabajador = catalogo.buscarTrabajador(prestamo.getIdTrabajador());
             Herramienta herramienta = catalogo.buscarHerramienta(prestamo.getIdHerramienta());
             System.out.println("Id del Trabajador: " + trabajador.getIdTrabajador());
@@ -356,43 +330,101 @@ public class Programa {
             System.out.println("Id de la Herramienta: " + herramienta.getIdHerramienta());
             System.out.printf("Nombre de la herramienta: %s\n", herramienta.getNombre());
             System.out.printf("Fecha de prestamo: %s\n", prestamo.getFechaPrestamo());
-            System.out.printf("Estado: %s", prestamo.getEstado());
-
+            System.out.print("Ingrese la fecha de devolucion (dd/MM/YYYY): ");
+            String fechaDevolucion = leer.next();
+            try {
+                LocalDate fechaDev = LocalDate.parse(fechaDevolucion, dtf);
+                LocalDate fechaPrest = LocalDate.parse(prestamo.getFechaPrestamo(), dtf);
+                if (fechaDev.isBefore(fechaPrest)) {
+                    System.out.println("Error: La fecha de devolucion no puede ser anterior a la fecha de prestamo.");
+                    return;
+                }
+            } catch (DateTimeParseException e) {
+                System.out.println("Error: Formato de fecha incorrecto.");
+                return;
+            }
+            System.out.println("Estas seguro de registrar el prestamo? [1=Si, 2=No]");
+            int confirmar2 = leer.nextInt();
+            if (confirmar2 == 1) {
+                herramienta.setEstado('D');
+                prestamo.setFechaDevolucion(fechaDevolucion);
+                prestamo.setEstado('C');
+                System.out.println("Devolucion registrada exitosamente.");
+                catalogo.contConcluidos++;
+                catalogo.contActivos--;
+            }
         } else {
-            System.out.println("Préstamo no encontrado.");
+            System.out.println("No hay prestamos registrados aun");
+        }
+    }
+
+    private static void consultarPrestamo(Scanner leer, Catalogo catalogo) {
+        
+        if (catalogo.getContP() >= 2) {
+            System.out.print("Ingrese el numero de préstamo: ");
+            int numPrestamo = leer.nextInt();
+
+            Prestamo prestamo = catalogo.buscarPrestamo(numPrestamo);
+            if (prestamo != null) {
+                Trabajador trabajador = catalogo.buscarTrabajador(prestamo.getIdTrabajador());
+                Herramienta herramienta = catalogo.buscarHerramienta(prestamo.getIdHerramienta());
+                System.out.println("Id del Trabajador: " + trabajador.getIdTrabajador());
+                System.out.printf("Nombre del trabajador: %s\n", trabajador.getNombre());
+                System.out.println("Id de la Herramienta: " + herramienta.getIdHerramienta());
+                System.out.printf("Nombre de la herramienta: %s\n", herramienta.getNombre());
+                System.out.printf("Fecha de prestamo: %s\n", prestamo.getFechaPrestamo());
+                System.out.printf("Estado: %s", prestamo.getEstado());
+
+            } else {
+                System.out.println("Prestamo no encontrado.");
+            }
+        } else {
+            System.out.println("No hay prestamos registrados aun");
         }
     }
 
     private static void reportePrestamosActivos(Catalogo catalogo) {
-        System.out.println("\nPRÉSTAMOS ACTIVOS:");
-        for (Prestamo p : catalogo.getPrestamos()) {
-            if (p != null && p.getEstado() == 'A') {
-                Trabajador trabajador = catalogo.buscarTrabajador(p.getIdTrabajador());
-                Herramienta herramienta = catalogo.buscarHerramienta(p.getIdHerramienta());
-                System.out.println("Id del Trabajador: " + trabajador.getIdTrabajador());
-                System.out.printf("Nombre del trabajador: %s\n", trabajador.getNombre());
-                System.out.println("Id de la Herramienta: " + herramienta.getIdHerramienta());
-                System.out.printf("Nombre de la herramienta: %s\n", herramienta.getNombre());
-                System.out.printf("Fecha de prestamo: %s\n", p.getFechaPrestamo());
-                System.out.println("----------------------------------------------------------");
+        
+        if (catalogo.getContActivos() >= 1) {
+            System.out.println("\nPRESTAMOS ACTIVOS:");
+            for (Prestamo p : catalogo.getPrestamos()) {
+                if (p != null && p.getEstado() == 'A') {
+                    Trabajador trabajador = catalogo.buscarTrabajador(p.getIdTrabajador());
+                    Herramienta herramienta = catalogo.buscarHerramienta(p.getIdHerramienta());
+                    System.out.println("Id del Trabajador: " + trabajador.getIdTrabajador());
+                    System.out.printf("Nombre del trabajador: %s\n", trabajador.getNombre());
+                    System.out.println("Id de la Herramienta: " + herramienta.getIdHerramienta());
+                    System.out.printf("Nombre de la herramienta: %s\n", herramienta.getNombre());
+                    System.out.printf("Fecha de prestamo: %s\n", p.getFechaPrestamo());
+                    System.out.println("----------------------------------------------------------");
+                }
             }
+            System.out.println("Fin del reporte");
+        } else {
+            System.out.println("No hay prestamos Activos ");
         }
     }
 
     private static void reportePrestamosConcluidos(Catalogo catalogo) {
-        System.out.println("\nPRÉSTAMOS CONCLUIDOS:");
-        for (Prestamo p : catalogo.getPrestamos()) {
-            if (p != null && p.getEstado() == 'C') {
-                Trabajador trabajador = catalogo.buscarTrabajador(p.getIdTrabajador());
-                Herramienta herramienta = catalogo.buscarHerramienta(p.getIdHerramienta());
-                System.out.println("Id del Trabajador: " + trabajador.getIdTrabajador());
-                System.out.printf("Nombre del trabajador: %s\n", trabajador.getNombre());
-                System.out.println("Id de la Herramienta: " + herramienta.getIdHerramienta());
-                System.out.printf("Nombre de la herramienta: %s\n", herramienta.getNombre());
-                System.out.printf("Fecha de prestamo: %s\n", p.getFechaPrestamo());
-                System.out.printf("Fecha de prestamo: %s\n", p.getFechaDevolucion());
-                System.out.println("----------------------------------------------------------");
+        
+        if (catalogo.getContConcluidos() >= 1) {
+            System.out.println("\nPRESTAMOS CONCLUIDOS:");
+            for (Prestamo p : catalogo.getPrestamos()) {
+                if (p != null && p.getEstado() == 'C') {
+                    Trabajador trabajador = catalogo.buscarTrabajador(p.getIdTrabajador());
+                    Herramienta herramienta = catalogo.buscarHerramienta(p.getIdHerramienta());
+                    System.out.println("Id del Trabajador: " + trabajador.getIdTrabajador());
+                    System.out.printf("Nombre del trabajador: %s\n", trabajador.getNombre());
+                    System.out.println("Id de la Herramienta: " + herramienta.getIdHerramienta());
+                    System.out.printf("Nombre de la herramienta: %s\n", herramienta.getNombre());
+                    System.out.printf("Fecha de prestamo: %s\n", p.getFechaPrestamo());
+                    System.out.printf("Fecha de prestamo: %s\n", p.getFechaDevolucion());
+                    System.out.println("----------------------------------------------------------");
+                }
             }
+            System.out.println("Fin del reporte");
+        } else {
+            System.out.println("No hay prestamos concluidos aun");
         }
     }
 }

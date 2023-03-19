@@ -19,7 +19,7 @@ public class Prestamo {
         this.estado = estado;
     }
 
-    // Métodos get
+    // Metodos get
     public int getNumPrestamo() {
         return numPrestamo;
     }
@@ -42,7 +42,8 @@ public class Prestamo {
     public char getEstado() {
         return estado;
     }
-    // Métodos set
+    
+    // Metodos set
     public void setFechaDevolucion(String fechaDevolucion) {
         this.fechaDevolucion = fechaDevolucion;
     }
@@ -51,8 +52,8 @@ public class Prestamo {
         this.estado = estado;
     }
 
-    // Método toString, esto devuelve una impresion de los atrubutos que tienen las instancias de esta clase.
+    // Metodo toString, esto devuelve una impresion de los atrubutos que tienen las instancias de esta clase.
     public String toString() {
-        return "\nNumero de Préstamo: " + numPrestamo;
+        return "\nNumero de Prestamo: " + numPrestamo;
     }
 }

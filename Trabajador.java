@@ -10,7 +10,7 @@ public class Trabajador {
         this.puesto = puesto;
     }
 
-    // Métodos Get
+    // Metodos Get
     public int getIdTrabajador() {
         return idTrabajador;
     }

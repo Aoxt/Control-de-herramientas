@@ -12,7 +12,7 @@ public class Herramienta {
         this.estado = estado;
     }
 
-    // Métodos Get
+    // Metodos Get
     public int getIdHerramienta() {
         return idHerramienta;
     }
@@ -29,7 +29,7 @@ public class Herramienta {
         return estado;
     }
 
-    // Método Setter
+    // Metodo Setter
     public void setEstado(char estado) {
         this.estado = estado;
     }
@@ -45,16 +45,16 @@ public class Herramienta {
         "Estado: " + (estado == 'P' ? "Prestada" : "Disponible");
         }
     /*
-     * Esta expresión se lee como "si estado es igual a 'P', imprime "Prestada",de
+     * Esta expresion se lee como "si estado es igual a 'P', imprime "Prestada",de
      * lo contrario,imprime "Disponible".
-     * El signo de interrogación ? y los dos puntos : en este contexto se utilizan
-     * como parte de la expresión condicional
-     * (también llamada operador ternario) en Java. La expresión condicional es una
-     * forma abreviada de una instrucción
-     * if-else que permite asignar un valor a una variable o expresión en función de
-     * una condición booleana. La sintaxis
-     * general de la expresión condicional es:
-     * condición ? valor_si_verdadero : valor_si_falso
+     * El signo de interrogacion ? y los dos puntos : en este contexto se utilizan
+     * como parte de la expresion condicional
+     * (tambien llamada operador ternario) en Java. La expresion condicional es una
+     * forma abreviada de una instruccion
+     * if-else que permite asignar un valor a una variable o expresion en funcion de
+     * una condicion booleana. La sintaxis
+     * general de la expresion condicional es:
+     * condicion ? valor_si_verdadero : valor_si_falso
 
      */
 }
