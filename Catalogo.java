@@ -1,7 +1,3 @@
-
-
-
-
 class Catalogo {
     // Atributos, en este caso arreglos de objetos
     private Trabajador[] trabajadores = new Trabajador[110];
@@ -82,7 +78,7 @@ class Catalogo {
         return null;
     }
 
-    // Metodo para agregar un nuevo objeto Prestamo al arreglo prestamos
+    
     public int getContT(){
         return contT;
     }
@@ -98,6 +94,7 @@ class Catalogo {
     public int getContActivos(){
         return contActivos;
     }
+    // Metodo para agregar un nuevo objeto Prestamo al arreglo prestamos
     public void agregarPrestamo(Prestamo prestamo) {
         for (int i = 0; i < prestamos.length; i++) {
             if (prestamos[i] == null) {

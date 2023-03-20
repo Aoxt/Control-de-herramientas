@@ -308,7 +308,6 @@ public class Programa {
 
     private static void registrarDevolucion(Scanner leer, Catalogo catalogo) {
 
-        
         if (catalogo.getContP() >= 2) {
             System.out.print("Ingrese el numero de préstamo: ");
             int numPrestamo = leer.nextInt();
@@ -359,7 +358,7 @@ public class Programa {
     }
 
     private static void consultarPrestamo(Scanner leer, Catalogo catalogo) {
-        
+
         if (catalogo.getContP() >= 2) {
             System.out.print("Ingrese el numero de préstamo: ");
             int numPrestamo = leer.nextInt();
@@ -384,7 +383,7 @@ public class Programa {
     }
 
     private static void reportePrestamosActivos(Catalogo catalogo) {
-        
+
         if (catalogo.getContActivos() >= 1) {
             System.out.println("\nPRESTAMOS ACTIVOS:");
             for (Prestamo p : catalogo.getPrestamos()) {
@@ -406,7 +405,7 @@ public class Programa {
     }
 
     private static void reportePrestamosConcluidos(Catalogo catalogo) {
-        
+
         if (catalogo.getContConcluidos() >= 1) {
             System.out.println("\nPRESTAMOS CONCLUIDOS:");
             for (Prestamo p : catalogo.getPrestamos()) {
